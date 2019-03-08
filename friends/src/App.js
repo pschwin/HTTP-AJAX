@@ -3,6 +3,7 @@ import './App.css';
 import axios from "axios";
 import FriendsList from './FriendsList.js';
 import FriendForm from './FriendForm';
+import {Route} from 'react-router-dom';
 
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
         this.setState({
           friends: res.data
         });
-        this.props.history.push('')
+        this.props.history.push('/friend-list')
       })
       .catch(err =>{
         console.log(err);
